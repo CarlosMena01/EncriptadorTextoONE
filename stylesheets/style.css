@@ -1,3 +1,6 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
 main{
     background-color: #052051;
 }
@@ -8,8 +11,14 @@ header{
 
 footer{
     background-color: white;
+    width: 100%;
     position: absolute;
-    bottom: 0px;
+    bottom: 5px;
+    font-family: 'Roboto', sans-serif;
+}
+footer a img{
+    width: 16px;
+    height: auto;
 }
 
 .grid{
@@ -37,17 +46,25 @@ footer{
 #input-user p {
     position: absolute;
     bottom: 80px;
+    font-size: 9pt;
 }
 #txt-input{
     width: 100%;
-    border: 0;
+    border: none;
     resize: none;
+    outline: none;
+    font-size: 16pt;
+}
+#txt-input:focus{
+    width: 100%;
+    border: none;
+    resize: none;
+    outline: none;
 }
 
 .btn{
     position: absolute;
     bottom: 10px;
-    flex-direction: row;
     align-items: center;
 
     width: 30%;
@@ -55,19 +72,29 @@ footer{
 
     background: #356EA9;
     border-radius: 16px;
+    font-size: 16pt;
+    border-color: #356EA9;
+    
+}
 
+.btn:hover{
+    background-color: #052051;
+    color: white;
 }
 .copiar{
     left: 35%;
     display: none;
+    color: white;
 }
 .encriptar{
     left: 15%;
+    color: white;
 }
 
 .desencriptar{
     background-color : #D8DFE8;
     right: 15%;
+    color: #356EA9;
 }
 
 #image-output{
@@ -93,10 +120,17 @@ footer{
 }
 #msg{
     position: absolute;
-    bottom: 60px;
+    bottom: 50px;
+    left: 10%;
+    font-size: 12pt;
+    text-align: center;
 }
 #msg-title{
     position: absolute;
     bottom: 80px;
+    left: 30%;
+    font-size: 20pt;
+    text-align: center;
+    font-weight: bold;
 }
 
