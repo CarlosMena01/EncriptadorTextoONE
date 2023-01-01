@@ -2,6 +2,101 @@ main{
     background-color: #052051;
 }
 
+header{
+    padding: 16px 0px 30px 0px;
+}
+
 footer{
     background-color: white;
+    position: absolute;
+    bottom: 0px;
 }
+
+.grid{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    height: 500px;
+}
+#input-user{
+    position: relative;
+    height: 80%;
+    background-color: white;
+    border-radius: 16px;
+    padding: 16px;
+    margin: 0px 20px 0px 50px;
+}
+#output{
+    position: relative;
+    height: 80%;
+    background-color: white;
+    border-radius: 16px;
+    padding: 16px;
+    margin: 0px 20px 0px 70px;
+}
+
+#input-user p {
+    position: absolute;
+    bottom: 80px;
+}
+#txt-input{
+    width: 100%;
+    border: 0;
+    resize: none;
+}
+
+.btn{
+    position: absolute;
+    bottom: 10px;
+    flex-direction: row;
+    align-items: center;
+
+    width: 30%;
+    height: 60px;
+
+    background: #356EA9;
+    border-radius: 16px;
+
+}
+.copiar{
+    left: 35%;
+    display: none;
+}
+.encriptar{
+    left: 15%;
+}
+
+.desencriptar{
+    background-color : #D8DFE8;
+    right: 15%;
+}
+
+#image-output{
+    width: 100%;
+    position: relative;
+}
+#image-meditation{
+    width: 70%;
+    position: absolute;
+    top: 12px;
+    left: 15%;
+    z-index: 2;
+}
+#image-computer{
+    width: 70%;
+    position: absolute;
+    top: 90px;
+    left: 15%;
+    z-index: 1;
+}
+#txt-output{
+    display: none;
+}
+#msg{
+    position: absolute;
+    bottom: 60px;
+}
+#msg-title{
+    position: absolute;
+    bottom: 80px;
+}
+

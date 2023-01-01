@@ -15,22 +15,25 @@
         <header>
             <a href="https://www.aluracursos.com/"><img src="images/Logo.svg" alt="Logo"></a>
         </header>
-        <div id="input-user">
-            <textarea name="txt-input" id="txt-input" cols="30" rows="10" placeholder="Ingrese texto aquí"></textarea>
-            <p>🛈 Solo letras minúsculas y sin acentos</p>
-            <button id="btn-encriptar">Encriptar</button>
-            <button id="btn-desencriptar">Desencriptar</button>
-        </div>
-        <div id="output">
-            <div id="image-output">
-                <img src="images/Meditation 1.svg" alt="Meditation" id="image-meditation">
-                <img src="images/Computer.svg" alt="Computer" id="image-computer">
+        <div class="grid">
+            <div id="input-user">
+                <textarea name="txt-input" id="txt-input" cols="30" rows="10" placeholder="Ingrese texto aquí"></textarea>
+                <p>🛈 Solo letras minúsculas y sin acentos</p>
+                <button class="btn encriptar">Encriptar</button>
+                <button class="btn desencriptar">Desencriptar</button>
+ 
             </div>
-
-            <textarea name="txt-output" id="txt-output" cols="30" rows="10"></textarea>
-            <p>Ningún mensaje fue encontrado</p>
-            <p>Ingresa el texto que desees encriptar o desencriptar.</p>
-            <button id="btn-copiar">Copiar</button>
+            <div id="output">
+                <div id="image-output">
+                    <img src="images/Meditation 1.svg" alt="Meditation" id="image-meditation">
+                    <img src="images/Computer.svg" alt="Computer" id="image-computer">
+                </div>
+    
+                <textarea name="txt-output" id="txt-output" cols="30" rows="10"></textarea>
+                <p id="msg-title">Ningún mensaje fue encontrado</p>
+                <p id="msg">Ingresa el texto que desees encriptar o desencriptar.</p>
+                <button class="btn copiar">Copiar</button>
+            </div>
         </div>
 
     </main>
