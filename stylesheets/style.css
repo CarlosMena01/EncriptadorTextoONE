@@ -1,6 +1,12 @@
 *{
     font-family: 'Roboto', sans-serif;
 }
+body{
+    display:grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 100%;
+    min-height: 100vh;
+}
 main{
     background-color: #052051;
 }
@@ -9,16 +15,20 @@ header{
     padding: 16px 0px 30px 0px;
 }
 
-footer{
-    background-color: white;
+.footerInfo{
+    background-color:#ffffff;
     width: 100%;
-    position: absolute;
-    bottom: 5px;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    bottom: 1%;
     font-family: 'Roboto', sans-serif;
+    left: 75%;
 }
-footer a img{
+.social{
     width: 16px;
     height: auto;
+    margin: 2px 0 0 0;
 }
 
 .grid{
@@ -30,32 +40,34 @@ footer a img{
     position: relative;
     height: 80%;
     background-color: white;
-    border-radius: 16px;
-    padding: 16px;
+    border-radius: 26px;
+    padding: 26px;
     margin: 0px 20px 0px 50px;
 }
 #output{
     position: relative;
     height: 80%;
     background-color: white;
-    border-radius: 16px;
-    padding: 16px;
+    border-radius: 26px;
+    padding: 26px;
     margin: 0px 20px 0px 70px;
 }
 
 #input-user p {
     position: absolute;
     bottom: 80px;
-    font-size: 9pt;
+    font-size: 1vw;
 }
-#txt-input{
+textarea{
     width: 100%;
     border: none;
     resize: none;
     outline: none;
-    font-size: 16pt;
+    font-size: 2vw;
+    scrollbar-color: #A9CEB6 #cbddd2;
+    scrollbar-width: thin;
 }
-#txt-input:focus{
+textarea:focus{
     width: 100%;
     border: none;
     resize: none;
@@ -72,12 +84,19 @@ footer a img{
 
     background: #356EA9;
     border-radius: 16px;
-    font-size: 16pt;
+    font-size: 2vw;
     border-color: #356EA9;
+
+    display: inline;
     
 }
 
 .btn:hover{
+    transform: scale(1.05);
+    transition-duration: 0.75s;
+}
+
+.btn:active{
     background-color: #052051;
     color: white;
 }
@@ -121,15 +140,15 @@ footer a img{
 #msg{
     position: absolute;
     bottom: 50px;
-    left: 10%;
-    font-size: 12pt;
+    left: 18%;
+    font-size: 1vw;
     text-align: center;
 }
 #msg-title{
     position: absolute;
     bottom: 80px;
     left: 30%;
-    font-size: 20pt;
+    font-size: 2vw;
     text-align: center;
     font-weight: bold;
 }
