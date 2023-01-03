@@ -118,20 +118,21 @@ textarea:focus{
 
 #image-output{
     width: 100%;
+    height: 30%;
     position: relative;
 }
 #image-meditation{
-    width: 70%;
+    width: 80%;
     position: absolute;
-    top: 12px;
-    left: 15%;
+    top: 10%;
+    left: 10%;
     z-index: 2;
 }
 #image-computer{
-    width: 70%;
+    width: 80%;
     position: absolute;
-    top: 90px;
-    left: 15%;
+    top: 70%;
+    left: 10%;
     z-index: 1;
 }
 #txt-output{
@@ -147,7 +148,7 @@ textarea:focus{
 #msg-title{
     position: absolute;
     bottom: 80px;
-    left: 30%;
+    left: 25%;
     font-size: 2vw;
     text-align: center;
     font-weight: bold;

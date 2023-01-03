@@ -21,8 +21,10 @@
         </header>
         <div class="grid">
             <div id="input-user">
-                <textarea name="txt-input" id="txt-input" cols="30" rows="10" placeholder="Ingrese texto aquí"></textarea>
-                <p>🛈 Solo letras minúsculas y sin acentos</p>
+                <div class="panel-text">
+                    <textarea name="txt-input" id="txt-input" cols="30" rows="10" placeholder="Ingrese texto aquí"></textarea>
+                    <p>🛈 Solo letras minúsculas y sin acentos</p>
+                </div>
                 <button class="btn encriptar" onclick="btnEncriptar()">Encriptar</button>
                 <button class="btn desencriptar" onclick="btnDesencriptar()">Desencriptar</button>
  
@@ -34,7 +36,7 @@
                 </div>
     
                 <textarea name="txt-output" id="txt-output" cols="30" rows="10"></textarea>
-                <p id="msg-title">Ningún mensaje <br> fue encontrado</p>
+                <p id="msg-title">Ningún mensaje fue <br> encontrado</p>
                 <p id="msg">Ingresa el texto que desees encriptar o desencriptar.</p>
                 <button id="btn-copiar" class="btn copiar">Copiar</button>
             </div>
