@@ -1,5 +1,6 @@
 *{
     font-family: 'Roboto', sans-serif;
+    z-index: 1;
 }
 body{
     display:grid;
@@ -156,4 +157,20 @@ textarea:focus{
     width: 16px;
     height: auto;
     margin: 2px 0 0 0;
+}
+
+.burbuja{
+    position: absolute;
+    top: calc(100% - 80px);
+
+    border-radius: 50%;
+
+    z-index: 0;
+
+    width: 80px;
+    height: 80px;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    opacity: 0.3;
 }

@@ -92,3 +92,65 @@ function btnDesencriptar(){
         showOutput(txtOrigin);
     }  
 }
+
+function btnCopiar(){
+    let contenido = document.querySelector("#txt-output");
+    contenido.select();
+    document.execCommand("copy");
+}
+
+
+/*************************************/
+/*  Ahora creamos las animaciones!!! */
+
+var currentTime = 0;
+
+/* Variables para las burbujas */
+var counterArray = [1,1,1,1,1]; //Contador de ciclos
+var periodsArray = [2,3,4,3.5,2.7]; //Periodo de cada burbuja
+var position_left = [0, 20, 40, 60, 80]; //Posición a la izquierda de cada elemento
+var radiusArray = [100,80,30,120, 90]; //Radios de cada burbuja 
+var burbujas = document.getElementsByClassName("burbuja");   
+
+function meditationAnimation(time){
+    let position_top = 9*Math.sin((time/1000) * 2*Math.PI * 0.25) + 9  // Porcentaje entre 0% y 18% a 0.25 Hz
+    
+    document.getElementById("image-meditation").style.top = position_top + "%";
+}
+
+function burbleAnimation(time){
+
+    for (let i = 0; i < burbujas.length; i++) {
+        /*  
+        Para cada burbuja calculamos su posición actual usando una recta
+        la variable counterArray nos ayuda a saber cuando la burbuja termina un recorrido y a reiniciarlo
+        */
+        let position_top = -(100/periodsArray[i])* (time/1000) + 100*counterArray[i];
+
+        // Asignamos el radio correspondiente
+        burbujas[i].style.width = radiusArray[i] + "px";
+        burbujas[i].style.height = radiusArray[i] + "px";
+
+        // Posicionamos la burbuja donde corresponde
+        burbujas[i].style.top = "calc(" + position_top + "% - "+ radiusArray[i] +"px)";
+        burbujas[i].style.left = position_left[i] + "%";
+
+        //Cada que la burbuja complete un ciclo
+        if(position_top < 0){
+            counterArray[i]++; //Contamos un ciclo para la burbuja especifica
+            radiusArray[i] = Math.floor(Math.random() * (120 - 30) + 30); // Asignamos un radio entre 30 y 120
+            position_left[i] = Math.floor(Math.random() * (18) + i*18); // Desplazamos lateralmente
+
+        }
+    }
+
+}
+
+function animation(){
+    currentTime += 10; //Se anima cada 10ms
+
+    meditationAnimation(currentTime);
+    burbleAnimation(currentTime);
+}
+
+setInterval(animation, 10);
