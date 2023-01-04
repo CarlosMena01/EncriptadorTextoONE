@@ -12,6 +12,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/b0ef41bee2.js" crossorigin="anonymous"></script>
+
     <title>Encriptador de texto</title>
 </head>
 <body>
@@ -23,7 +26,7 @@
             <div id="input-user">
                 <div class="panel-text">
                     <textarea name="txt-input" id="txt-input" cols="30" rows="10" placeholder="Ingrese texto aquí"></textarea>
-                    <p>🛈 Solo letras minúsculas y sin acentos</p>
+                    <p id="rule">🛈 Solo letras minúsculas y sin acentos</p>
                 </div>
                 <div class="buttons-container">
                     <button class="btn encriptar" onclick="btnEncriptar()">Encriptar</button>
@@ -40,8 +43,13 @@
                 <textarea name="txt-output" id="txt-output" cols="30" rows="10"></textarea>
                 <p id="msg-title">Ningún mensaje fue <br> encontrado</p>
                 <p id="msg">Ingresa el texto que desees encriptar o desencriptar.</p>
-                <button id="btn-copiar" class="btn copiar" onclick="btnCopiar()">Copiar</button>
+                <button id="btn-copiar" class="btn copiar" onclick="btnCopiar()"><i class="fa-solid fa-copy"></i></button>
             </div>
+        </div>
+
+        <div class="notificacion">
+            <i class="fa-solid fa-circle-check icon"></i>
+            <span>Texto copiado</span>            
         </div>
 
         <div class="burbijas">
@@ -57,10 +65,11 @@
     <footer>
         <div class="footerInfo">
             <span>&copy; 2023 | Made by Carlos Mena |</span>
-            <a href="https://github.com/CarlosMena01"><img src="images/github.png" alt="github" class="social"></a>
-            <a href="https://www.linkedin.com/in/carlos-mena-t/" ><img src="images/linkedin.png" alt="linkedin" class="social"></a>
+            <a href="https://github.com/CarlosMena01"><i class="fa-brands fa-github social"></i></a>
+            <a href="https://www.linkedin.com/in/carlos-mena-t/" ><i class="fa-brands fa-linkedin social"></i></a>
         </div>
     </footer>
+
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="scripts/script.js"></script>
 </body>

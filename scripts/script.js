@@ -1,3 +1,16 @@
+/* Escuchamos algunos eventos */
+
+document.getElementById('txt-input').addEventListener('input', () => {
+    text = document.getElementById('txt-input').value;
+    if(/[^a-z\sñ,.¡!¿?]/.test(text)){
+        document.getElementById('rule').style.color = "red";
+        document.getElementById('rule').style.fontSize = "1.5vw";
+    } else {
+        document.getElementById('rule').style.color = "black";
+        document.getElementById('rule').style.fontSize = "1vw";
+    }
+})
+
 function reset(){
     /* Limpiamos el cuadro de input */
     document.getElementById("txt-input").value = "";
@@ -47,7 +60,7 @@ function desencriptar(txtCifrado) {
 
 function validText(text){
     /*  Confimamos letras minusculas y sin acentos */
-    if (/[^a-zñ ]/.test(text)) {
+    if (/[^a-z\sñ,.¡!¿?]/.test(text)) {
         swal({
             icon: 'error',
             iconColor: '#b9ab9c',
@@ -97,12 +110,24 @@ function btnCopiar(){
     let contenido = document.querySelector("#txt-output");
     contenido.select();
     document.execCommand("copy");
+    /******** Animamos el mensaje de copiado *********/
+    notify = document.getElementsByClassName("notificacion")[0];
+    notify.style.display = "flex";
+    notify.style.animation = "notification-in 0.5s cubic-bezier(0.250, 0.250, 0.750, 0.750) both";
+
+    setTimeout(()=>{
+        notify.style.animation = "notification-out 0.5s cubic-bezier(0.250, 0.250, 0.750, 0.750) both";
+    }, 2000);
+
+    setTimeout(()=>{
+        notify.style.display = "none";
+    }, 5000);
+
 }
 
 
 /*************************************/
 /*  Ahora creamos las animaciones!!! */
-
 var currentTime = 0;
 
 /* Variables para las burbujas */
@@ -145,6 +170,7 @@ function burbleAnimation(time){
     }
 
 }
+
 
 function animation(){
     currentTime += 10; //Se anima cada 10ms
