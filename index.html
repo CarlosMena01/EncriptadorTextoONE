@@ -6,13 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Encriptador de Texto - Challenge ONE">
 
+    <!-- Hojas de estilo -->
     <link rel="stylesheet" href="stylesheets/reset.css">
-    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/phone.css" media="screen and (max-width: 767px)">
+    <link rel="stylesheet" href="stylesheets/tablet.css" media="screen and (min-width: 768px) and (max-width: 991px)">
+    <link rel="stylesheet" href="stylesheets/desktop.css" media="screen and (min-width: 992px)">
 
+    <!-- Fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
+    <!-- Iconos -->
     <script src="https://kit.fontawesome.com/b0ef41bee2.js" crossorigin="anonymous"></script>
 
     <title>Encriptador de texto</title>
@@ -39,11 +44,13 @@
                     <img src="images/Meditation 1.svg" alt="Meditation" id="image-meditation">
                     <img src="images/Computer.svg" alt="Computer" id="image-computer">
                 </div>
-    
-                <textarea name="txt-output" id="txt-output" cols="30" rows="10"></textarea>
-                <p id="msg-title">Ningún mensaje fue <br> encontrado</p>
-                <p id="msg">Ingresa el texto que desees encriptar o desencriptar.</p>
-                <button id="btn-copiar" class="btn copiar" onclick="btnCopiar()"><i class="fa-solid fa-copy"></i></button>
+                
+                <div id="text-output">
+                    <textarea name="txt-output" id="txt-output" cols="30" rows="10"></textarea>
+                    <p id="msg-title">Ningún mensaje fue <br> encontrado</p>
+                    <p id="msg">Ingresa el texto que desees encriptar o desencriptar.</p>
+                    <button id="btn-copiar" class="btn copiar" onclick="btnCopiar()"><i class="fa-solid fa-copy"></i></button>                        
+                </div>
             </div>
         </div>
 

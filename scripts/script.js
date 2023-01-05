@@ -18,7 +18,11 @@ function reset(){
     document.getElementById("txt-output").style.display = "none";
     document.getElementById("btn-copiar").style.display = "none";
     /* Mostramos el cuadro de texto y el botón de copiar */
-    document.getElementById("image-output").style.display = "block";
+    if ( window.screen.width < 992 ) {
+        document.getElementById("image-output").style.display = "none";    
+    } else {
+        document.getElementById("image-output").style.display = "block";
+    }
     document.getElementById("msg-title").style.display = "inline";
     document.getElementById("msg").style.display = "inline"
 }
