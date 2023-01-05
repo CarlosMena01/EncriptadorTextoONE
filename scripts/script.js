@@ -1,5 +1,13 @@
 /* Escuchamos algunos eventos */
 
+window.addEventListener('load', () => {
+    setTimeout(()=>{
+        document.getElementsByClassName('focused')[0].style.display = 'none';
+        document.querySelector('main').style.display = 'block';
+    }, 500);
+
+})
+
 document.getElementById('txt-input').addEventListener('input', () => {
     text = document.getElementById('txt-input').value;
     if(/[^a-z\sñ,.¡!¿?]/.test(text)){
